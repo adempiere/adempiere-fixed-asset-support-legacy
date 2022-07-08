@@ -19,7 +19,8 @@ if (JavaVersion.current().isJava8Compatible()) {
 }
 
 dependencies {
-    api 'io.github.adempiere:template:3.9.4-develop-1.0'
+    api 'io.github.adempiere:base:3.9.4-develop-2.1'
+    api 'io.github.adempiere:asset:3.9.4-develop-1.2'
 }
 
 sourceSets {
@@ -44,7 +45,7 @@ version = "1.0.0"
 
 jar {
     manifest {
-        attributes("Implementation-Title": "Adempiere Template Management",
+        attributes("Implementation-Title": "Adempiere asset Management",
                    "Implementation-Version": version, 
                    "EntityType": entityType)
     }
@@ -63,12 +64,12 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
         	groupId 'io.github.adempiere'
-            artifactId 'template-support-legacy'
+            artifactId 'asset-support-legacy'
             version
            	from components.java
            	pom {
-                name = 'Template'
-                description = 'Legacy library for old implementations of template management. Please note that this library will be deprecated'
+                name = 'asset'
+                description = 'Legacy library for old implementations of asset management. Please note that this library will be deprecated'
                 url = 'http://adempiere.io/'
                 licenses {
                     license {
@@ -84,9 +85,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:git://github.com/adempiere/adempiere-template-support-legacy.git'
-                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-template-support-legacy.git'
-                    url = 'http://github.com/adempiere/adempiere-template-support-legacy'
+                    connection = 'scm:git:git://github.com/adempiere/adempiere-asset-support-legacy.git'
+                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-asset-support-legacy.git'
+                    url = 'http://github.com/adempiere/adempiere-asset-support-legacy'
                 }
             }
 		}
